@@ -1,0 +1,11 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "description": "Foo bar",
+  "main": "index.js",
+  "scripts": {
+    "postprepare": "echo 'Hello World!'" 
+  },
+  "author": "",
+  "license": "ISC"
+}

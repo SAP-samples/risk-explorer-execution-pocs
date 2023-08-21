@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "echo Hello!"
+  },
+  "dependencies": {
+    "example9": "file:../malicious_depenency"
+  }
+}

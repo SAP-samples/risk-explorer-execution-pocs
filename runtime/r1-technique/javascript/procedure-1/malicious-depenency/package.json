@@ -1,0 +1,11 @@
+{
+    "name": "example8",
+    "version": "1.0.0",
+    "description": "Foo bar",
+    "scripts": {
+        "test" : "touch Hacked_test.txt"
+    },
+    "author": "",
+    "license": "ISC"
+}
+  

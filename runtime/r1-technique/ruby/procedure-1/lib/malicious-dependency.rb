@@ -1,0 +1,1 @@
+puts "Hello world from the malicious dependency!"
