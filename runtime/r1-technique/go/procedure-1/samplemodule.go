@@ -1,26 +1,22 @@
 package samplemodule
 
 import (
-    "fmt"
-    "log"
-    "os"
+	"fmt"
+	"log"
+	"os"
 )
-	
-func init(){
 
-   fmt.Println("malicious init method is running in samplemodule")
+func init() {
+	fmt.Println("Malicious init method is running in samplemodule")
+	f, err := os.Create("/tmp/arbitrary_data.txt")
 
-   f, err := os.Create("/tmp/arbitrary_data.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    defer f.Close()
+	defer f.Close()
 
 }
 func Hello() {
-    fmt.Println("main method of samplemodule")
+	fmt.Println("main method of samplemodule")
 }
-
-

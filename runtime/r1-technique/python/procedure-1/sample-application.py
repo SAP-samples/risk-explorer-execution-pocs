@@ -1,3 +1,3 @@
 import foo
 
-print('hello')
+print('Hello')

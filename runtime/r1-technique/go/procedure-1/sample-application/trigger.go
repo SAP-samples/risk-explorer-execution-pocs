@@ -1,12 +1,12 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    "example.com/samplemodule"
+	"example.com/samplemodule"
 )
 
 func main() {
-    samplemodule.Hello()
-    fmt.Println("main method of the trigger app")
+	samplemodule.Hello()
+	fmt.Println("Main method of the trigger app")
 }

@@ -1,12 +1,13 @@
-# Took from https://docs.python.org/3/distutils/introduction.html#distutils-simple-example
+"""Example inspired by
+https://docs.python.org/3/distutils/introduction.html#distutils-simple-example
 
-# To create the sdist: python3.11 setup.py sdist
-# Then you find the package to be distributed in the ./dist folder
+To create the sdist: python3.11 setup.py sdist
 
-
+Then the package to be distributed is in ./dist folder
+"""
 from setuptools import setup
 
-import os; os.system("echo 'Hello World!'")      # Place any malicious code :)
+import os; os.system("echo 'Hello World!'")  # Place any malicious code :)
 
 
 setup(name='foo',
