@@ -5,6 +5,8 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
 -->
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE.txt)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/risk-explorer-execution-pocs)](https://api.reuse.software/info/github.com/SAP-samples/risk-explorer-execution-pocs)
+
 
 
 ## Description
