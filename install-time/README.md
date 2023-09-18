@@ -3,6 +3,8 @@
 We identify 3 techniques to achieve ACE when downstream users/projects install
 a 3rd-party dependency.
 
+
+
 ## i1 - Run command/scripts leveraging install-hooks
 
 ### Javascript
@@ -48,6 +50,46 @@ composer update
 ```
 in case a file `composer.lock` is present.
 
+
+
 ## i2 - Run code in build script
 
+
+### Python
+
+Pip uses the file `setup.py` as a source of information to install and manage
+Python source distribution (i.e., sdist) packages.
+An attacker can directly add malicious Python commands in `setup.py`.
+
+We include 2 PoCs with different shell injection scripts.
+
+#### How to run
+
+```
+pip install .
+```
+
+
+### Rust
+
+In Rust, the `Cargo.toml` file is used to specify package metadata as well as
+its direct dependencies.
+Build scripts can be included within a package that are compiled and executed
+just before the package is built.
+To trigger this, the cargo build system searches for a `build.rs` script in the
+root directory of the project being installed.
+
+An attacker can exploit this behavior either injecting a malicious script in
+the `build.rs` file or specifying a different path to the build script in
+`Cargo.toml`.
+
+#### How to run
+```
+cargo install
+```
+
+
+
 ## i3 - Run code in build extension(s)
+
+
