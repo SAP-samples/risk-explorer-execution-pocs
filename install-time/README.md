@@ -78,10 +78,11 @@ Build scripts can be included within a package that are compiled and executed
 just before the package is built.
 To trigger this, the cargo build system searches for a `build.rs` script in the
 root directory of the project being installed.
-
 An attacker can exploit this behavior either injecting a malicious script in
 the `build.rs` file or specifying a different path to the build script in
 `Cargo.toml`.
+
+We include 1 PoC with a malicious `build.rs`.
 
 #### How to run
 ```
