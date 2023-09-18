@@ -72,8 +72,8 @@ pip install .
 
 ### Rust
 
-In Rust, the `Cargo.toml` file is used to specify package metadata as well as
-its direct dependencies.
+The `Cargo.toml` file is used to specify package metadata as well as its direct
+dependencies.
 Build scripts can be included within a package that are compiled and executed
 just before the package is built.
 To trigger this, the cargo build system searches for a `build.rs` script in the
@@ -94,3 +94,16 @@ cargo install
 ## i3 - Run code in build extension(s)
 
 
+### Ruby
+The `.gemspec` file contains the metadata and dependencies for a gem. Gems may
+include extensions that are built and executed at installation time. 
+An attacker can exploit this behavior including a malicious build extension and
+referencing it in `.gemspec`.
+
+We include 1 PoC with a malicious extension.
+
+#### How to run
+
+```
+gem install
+```
