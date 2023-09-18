@@ -10,8 +10,8 @@
       }
     ],
     "require": {},
-    "scripts": {     
-      "pre-update-cmd": [
+    "scripts": {
+      "pre-autoload-dump": [
         "echo 'Hello World!'" 
       ]
     }

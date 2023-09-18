@@ -11,7 +11,7 @@
     ],
     "require": {},
     "scripts": {
-      "post-autoload-dump": [
+      "post-update-cmd": [
         "echo 'Hello World!'" 
       ]
     }
