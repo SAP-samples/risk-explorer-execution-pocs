@@ -1,0 +1,53 @@
+# Install-Time Execution
+
+We identify 3 techniques to achieve ACE when downstream users/projects install
+a 3rd-party dependency.
+
+## i1 - Run command/scripts leveraging install-hooks
+
+### Javascript
+
+Npm leverages installation hooks, namely: 
+pre-install, install, post-install, preprepare, prepare, postprepare,
+and prepublish (deprecated). 
+At this stage, attackers have the possibility to directly execute malicious
+shell commands, or to invoke external scripts which must be included within
+the package.
+
+We include 7 PoCs, i.e., one for each installation hook.
+
+#### How to run
+
+```
+npm install
+```
+
+### PHP
+
+Similarly to npm, also composer leverages installation hooks:
+pre-install-cmd, post-install-cmd, pre-autoload-dump, and post-autoload-dump.
+Again, attackers have the possibility to directly execute malicious
+shell commands or to invoke external scripts.
+
+Furthermore, two other hooks exist, i.e., 
+pre-update-cmd and post-update-cmd,
+but they are triggered only if a file `composer.lock` does not exist.
+
+We include 6 PoCs, i.e., one for each installation hook.
+
+#### How to run
+
+All the 6 PoCs can be run with
+```
+composer install
+```
+
+The 5th and 6th PoCs can be run with
+```
+composer update
+```
+in case a file `composer.lock` is present.
+
+## i2 - Run code in build script
+
+## i3 - Run code in build extension(s)
