@@ -1,0 +1,1 @@
+const myDependency = require('example')
